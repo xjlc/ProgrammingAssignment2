@@ -4,6 +4,7 @@
 
 # makeCacheMatrix: This function creates a special "matrix" object that can cache its inverse.
 # First of a pair of functions that cache the inverse of a matrix. See also cacheSolve
+
 makeCacheMatrix <- function(x = matrix()) {
     s <- NULL
 	## set is not strictly necessary here, as it is never used. Its function is to provide something similar to an OOP setter method
@@ -23,7 +24,6 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 # cacheSolve: This function computes the inverse of the special "matrix" returned by makeCacheMatrix. If the inverse has already been calculated (and the matrix has not changed), then cacheSolve retrieves the inverse from the cache.
-
 # Second of a pair of functions that cache the inverse of a matrix. See also makeCacheMatrix
 
 cacheSolve <- function(x, ...) {
